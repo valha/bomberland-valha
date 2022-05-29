@@ -48,6 +48,19 @@ services:
         networks:
             - coderone-tournament
         restart: on-failure
+
+    agent-c:
+        extends:
+            file: base-compose.yml
+            # update next line with a service in base-compose.yml to change agent
+            service: cpp-agent
+        environment:
+            - GAME_CONNECTION_STRING=ws://game-engine:3000/?role=agent&agentId=agentB&name=cpp-agent
+        depends_on:
+            - game-engine
+        networks:
+            - coderone-tournament
+        restart: on-failure
         
 networks:
     coderone-tournament:
