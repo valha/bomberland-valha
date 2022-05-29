@@ -22,17 +22,17 @@ services:
 
     # Uncomment the following "agent-a" blocks to connect a second agent to the environment
 
-    # agent-a:
-    #     extends:
-    #         file: base-compose.yml
-    #         # update next line with a service in base-compose.yml to change agent
-    #         service: cpp-agent
-    #     environment:
-    #         - GAME_CONNECTION_STRING=ws://game-engine:3000/?role=agent&agentId=agentA&name=cpp-agent
-    #     depends_on:
-    #         - game-engine
-    #     networks:
-    #         - coderone-tournament
+     agent-a:
+         extends:
+             file: base-compose.yml
+             # update next line with a service in base-compose.yml to change agent
+             service: cpp-agent
+         environment:
+             - GAME_CONNECTION_STRING=ws://game-engine:3000/?role=agent&agentId=agentA&name=cpp-agent
+         depends_on:
+             - game-engine
+         networks:
+             - coderone-tournament
 
     agent-b:
         extends:
