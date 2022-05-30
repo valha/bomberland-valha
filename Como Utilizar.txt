@@ -1,0 +1,19 @@
+Pasos de Ejecución:
+
+1. Descargar e Instalar: Docker Desktop https://www.docker.com/products/docker-desktop/
+2. Activar el Pluguin de Ubuntu
+__
+
+3. Ir a: https://www.gocoder.one/bomberland y Registrarse
+4. Descargar la repo desde el git.
+4. En Ubuntu ejecutar la linea de código mencionada abajo: 
+
+```
+docker-compose up --abort-on-container-exit --force-recreate
+```
+
+5. Dentro de https://www.gocoder.one/bomberland, en la parte de 'game client' se puede ingresar como espectador o jugador, 
+luego de ingresar la linea "docker-compose up --abort-on-container-exit --force-recreate en" consola.
+
+
+Documentación: https://www.gocoder.one/docs
